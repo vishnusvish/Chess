@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            background-color: black;
+            height: max-content;
+            width: max-content;
+            border: 5px solid blue;
+            margin: auto;
+            
+
+        }
+
+        
+
+        .black {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+
+        .white {
+            height: 100px;
+            width: 100px;
+            background-color: white;
+        }
+
+        i {
+            font-size: 50px;
+            padding: 30px;
+        }
+
+        .yellow {
+            color: yellowgreen;
+        }
+
+        .grey {
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div onClick="getcoin('a8',0)" class="black chessboard"><i id="red-rook1"
+                class="fa-solid fa-chess-rook top yellow"></i></div>
+        <div onClick="getcoin('b8',1)" class="white chessboard"><i id="red-knight1"
+                class="fa-solid fa-chess-knight top yellow"></i></div>
+        <div onClick="getcoin('c8',2)" class="black chessboard"><i id="red-bishop1"
+                class="fa-solid fa-chess-bishop top yellow"></i></div>
+        <div onClick="getcoin('d8',3)" class="white chessboard"><i id="red-queen-green"
+                class="fa-solid fa-chess-queen top yellow"></i></div>
+        <div onClick="getcoin('e8',4)" class="black chessboard"><i id="red-king-green"
+                class="fa-solid fa-chess-king top yellow"></i></div>
+        <div onClick="getcoin('f8',5)" class="white chessboard"><i id="red-bishop2"
+                class="fa-solid fa-chess-bishop top yellow"></i></div>
+        <div onClick="getcoin('g8',6)" class="black chessboard"><i id="red-knight2"
+                class="fa-solid fa-chess-knight top yellow"></i></div>
+        <div onClick="getcoin('h8',7)" class="white chessboard"><i id="red-rook2"
+                class="fa-solid fa-chess-rook top yellow"></i></div>
+
+        <div onClick="getcoin('a7',8)" class="white chessboard"><i id="black-rook1"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+        <div onClick="getcoin('b7',9)" class="black chessboard"><i id="black-rook2"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+        <div onClick="getcoin('c7',10)" class="white chessboard"><i id="black-rook3"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+        <div onClick="getcoin('d7',11)" class="black chessboard"><i id="black-rook4"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+        <div onClick="getcoin('e7',12)" class="white chessboard"><i id="black-rook5"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+        <div onClick="getcoin('f7',13)" class="black chessboard"><i id="black-rook6"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+        <div onClick="getcoin('g7',14)" class="white chessboard"><i id="black-rook7"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+        <div onClick="getcoin('h7',15)" class="black chessboard"><i id="black-rook8"
+                class="fa-solid fa-chess-pawn top yellow"></i></div>
+
+        <div onClick="getcoin('a6',16)" class="black chessboard"></div>
+        <div onClick="getcoin('b6',17)" class="white chessboard"></div>
+        <div onClick="getcoin('c6',18)" class="black chessboard"></div>
+        <div onClick="getcoin('d6',19)" class="white chessboard"></div>
+        <div onClick="getcoin('e6',20)" class="black chessboard"></div>
+        <div onClick="getcoin('f6',21)" class="white chessboard"></div>
+        <div onClick="getcoin('g6',22)" class="black chessboard"></div>
+        <div onClick="getcoin('h6',23)" class="white chessboard"></div>
+
+        <div onClick="getcoin('a5',24)" class="white chessboard"></div>
+        <div onClick="getcoin('b5',25)" class="black chessboard"></div>
+        <div onClick="getcoin('c5',26)" class="white chessboard"></div>
+        <div onClick="getcoin('d5',27)" class="black chessboard"></div>
+        <div onClick="getcoin('e5',28)" class="white chessboard"></div>
+        <div onClick="getcoin('f5',29)" class="black chessboard"></div>
+        <div onClick="getcoin('g5',30)" class="white chessboard"></div>
+        <div onClick="getcoin('h5',31)" class="black chessboard"></div>
+
+        <div onClick="getcoin('a4,32')" class="black chessboard"></div>
+        <div onClick="getcoin('b4,33')" class="white chessboard"></div>
+        <div onClick="getcoin('c4,34')" class="black chessboard"></div>
+        <div onClick="getcoin('d4,35')" class="white chessboard"></div>
+        <div onClick="getcoin('e4,36')" class="black chessboard"></div>
+        <div onClick="getcoin('f4,37')" class="white chessboard"></div>
+        <div onClick="getcoin('g4,38')" class="black chessboard"></div>
+        <div onClick="getcoin('h4,39')" class="white chessboard"></div>
+
+        <div onClick="getcoin('a3',40)" class="white chessboard"></div>
+        <div onClick="getcoin('b3',41)" class="black chessboard"></div>
+        <div onClick="getcoin('c3',42)" class="white chessboard"></div>
+        <div onClick="getcoin('d3',43)" class="black chessboard"></div>
+        <div onClick="getcoin('e3',44)" class="white chessboard"></div>
+        <div onClick="getcoin('f3',45)" class="black chessboard"></div>
+        <div onClick="getcoin('g3',46)" class="white chessboard"></div>
+        <div onClick="getcoin('h3',47)" class="black chessboard"></div>
+
+        <div onClick="getcoin('a2',48)" class="black chessboard"><i id="blue-pawn1"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+        <div onClick="getcoin('b2',49)" class="white chessboard"><i id="blue-pawn2"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+        <div onClick="getcoin('c2',50)" class="black chessboard"><i id="blue-pawn3"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+        <div onClick="getcoin('d2',51)" class="white chessboard"><i id="blue-pawn4"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+        <div onClick="getcoin('e2',52)" class="black chessboard"><i id="blue-pawn5"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+        <div onClick="getcoin('f2',53)" class="white chessboard"><i id="blue-pawn6"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+        <div onClick="getcoin('g2',54)" class="black chessboard"><i id="blue-pawn7"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+        <div onClick="getcoin('h2',55)" class="white chessboard"><i id="blue-pawn8"
+                class="fa-solid fa-chess-pawn top grey"></i></div>
+
+        <div onClick="getcoin('a1',56)" class="white chessboard"><i id="red-rook-left"
+                class="fa-solid fa-chess-rook top grey"></i></div>
+        <div onClick="getcoin('b1',57)" class="black chessboard"><i id="red-knight1-left"
+                class="fa-solid fa-chess-knight top grey"></i></div>
+        <div onClick="getcoin('c1',58)" class="white chessboard"><i id="red-bishop1-left"
+                class="fa-solid fa-chess-bishop top grey"></i></div>
+        <div onClick="getcoin('d1',59)" class="black chessboard"><i id="red-king-grey"
+                class="fa-solid fa-chess-king top grey"></i></div>
+        <div onClick="getcoin('e1',60)" class="white chessboard"><i id="red-queen-grey"
+                class="fa-solid fa-chess-queen top grey"></i></div>
+        <div onClick="getcoin('f1',61)" class="black chessboard"><i id="red-bishop2-right"
+                class="fa-solid fa-chess-bishop top grey"></i></div>
+        <div onClick="getcoin('g1',62)" class="white chessboard"><i id="red-knight2-right"
+                class="fa-solid fa-chess-knight top grey"></i></div>
+        <div onClick="getcoin('h1',63)" class="black chessboard"><i id="red-rook2-right"
+                class="fa-solid fa-chess-rook top grey"></i></div>
+
+
+
+    </div>
+</body>
+<script src="./chess.js"></script>
+
+</html>
